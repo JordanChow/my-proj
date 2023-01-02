@@ -15,9 +15,12 @@ export const updateUser = async (req, res) => {
     const { id } = req.params;
     const updatedUser = req.body;
 
-    await User.updateOne(id, updatedUser);
+    const user = await User.findById(id);
 
-    res.status(200).json(updateUser);
+    Object.assign(user, updatedUser);
+    user.save();
+
+    res.status(200).json(user);
   } catch (err) {
     res.status(404).json({ message: err.message });
   }

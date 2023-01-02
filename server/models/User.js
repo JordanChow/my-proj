@@ -1,5 +1,10 @@
 import mongoose from "mongoose";
 
+const userRole = {
+  BUSINESS: "BUSINESS",
+  DEVELOPER: "DEVELOPER",
+};
+
 const UserSchema = new mongoose.Schema(
   {
     firstName: {
@@ -24,6 +29,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       min: 5,
+    },
+    role: {
+      type: userRole,
+      required: true,
     },
     picturePath: {
       type: String,
