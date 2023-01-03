@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userRole = {
+export const userRole = {
   BUSINESS: "BUSINESS",
   DEVELOPER: "DEVELOPER",
 };
@@ -31,7 +31,8 @@ const UserSchema = new mongoose.Schema(
       min: 5,
     },
     role: {
-      type: userRole,
+      type: String,
+      enum: userRole,
       required: true,
     },
     picturePath: {

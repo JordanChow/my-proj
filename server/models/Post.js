@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const PostStatus = {
+export const PostStatus = {
   OPEN: "OPEN",
   IN_PROGRESS: "IN PROGRESS",
   COMPLETE: "COMPLETE",
@@ -26,7 +26,7 @@ const PostSchema = new mongoose.Schema(
     },
     location: {
       type: String,
-      default: true,
+      required: true,
     },
     picturePath: {
       type: String,
