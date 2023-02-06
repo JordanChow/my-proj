@@ -2,7 +2,6 @@ import Post from "../models/Post.js";
 import User from "../models/User.js";
 
 // CREATE
-
 export const createPost = async (req, res) => {
   try {
     const { ownerUserId, businessName, location, description, picturePath } =

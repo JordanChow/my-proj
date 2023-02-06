@@ -14,6 +14,7 @@ export const register = async (req, res) => {
       role,
       location,
       birthday,
+      about,
     } = req.body;
 
     const salt = await bcrypt.genSalt();
@@ -28,6 +29,7 @@ export const register = async (req, res) => {
       picturePath,
       location,
       birthday,
+      about,
     });
 
     const savedUser = await newUser.save();
