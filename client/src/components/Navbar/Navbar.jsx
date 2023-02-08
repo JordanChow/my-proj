@@ -1,7 +1,8 @@
-import { Box, Button, Flex, Text, Spacer, Link } from "@chakra-ui/react";
+import { Box, Button, Flex, Text, Spacer, Link, Icon } from "@chakra-ui/react";
 import { setLogout } from "state";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { RiAccountCircleLine } from "react-icons/ri";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -20,18 +21,24 @@ const Navbar = () => {
       pos="sticky"
       top="0"
       zIndex={999}
+      background="white"
     >
+      {/* TODO: add logo */}
       <Link href={"/"}>logo</Link>
 
       <Spacer />
       {user ? (
-        <Text>Profile</Text>
+        <Icon as={RiAccountCircleLine} boxSize={6} />
       ) : (
         <Flex alignItems={"center"} justifyContent={"space-between"}>
-          <Button variant="ghost" mr={6}>
+          <Button onClick={() => navigate("/login")} variant="ghost" mr={6}>
             sign in
           </Button>
-          <Button background="mint" color="white">
+          <Button
+            onClick={() => navigate("/signup")}
+            background="mint"
+            color="white"
+          >
             <Text mb="1">sign up</Text>
           </Button>
         </Flex>

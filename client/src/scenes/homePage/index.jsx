@@ -8,6 +8,8 @@ const HomePage = () => {
       <Banner />
       <VStack spacing={10} mx={28} mt={10}>
         <Post />
+        <Post />
+        <Post />
       </VStack>
     </>
   );

@@ -12,7 +12,7 @@ const Banner = () => {
       pt="6"
       px="28"
     >
-      <Heading color="white" mb={20}>
+      <Heading color="white" mb={8}>
         Connecting eager developers and growing businesses
       </Heading>
       <Text color="white" mb={2}>
