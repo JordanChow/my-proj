@@ -1,7 +1,4 @@
-import { Box, Button, Flex, Text, Heading } from "@chakra-ui/react";
-import { setLogout } from "state";
-import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Box, Text, Heading } from "@chakra-ui/react";
 
 const Banner = () => {
   return (
